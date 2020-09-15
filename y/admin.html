@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ панель</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.css">
+
+    <script src="all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="admin-logo">
+            <img src="img/logo2.jpg" alt="NoziRam">
+            <span>Панель администратора</span>
+            <i class="fas fa-bars"></i>
+        </div>
+
+        <form action="" enctype="multipart/form-data" class="add-form">
+            <select name="categories" id="categories">
+                <option value="">Выберите категорию</option>
+                <option value="">1 категория</option>
+            </select>
+
+            <select name="product-type" id="product-type">
+                <option value="">Выберите тип товара</option>
+                <option value="">1 тип товара</option>
+            </select>
+            <!-- <input type="number" id="id" name="id" placeholder="id номер"> -->
+            <input type="text" id="name" placeholder="Наименование товара">
+            <textarea placeholder="Описание товара" name="" id="description" cols="30" rows="10"></textarea>
+            <input type="number" id="price" placeholder="Цена">
+            <fieldset class="colors-fieldset">
+
+                <legend>Доступные цвета</legend>
+                <div class="colors-container">
+                    <div class="white">
+                        <input type="checkbox" value="white" name="white" id="white" class="available_colors">
+                        <label for="white"></label>
+
+                    </div>
+                    <div class="ivory">
+                        <input type="checkbox" value="ivory" name="ivory" id="ivory" class="available_colors">
+                        <label for="ivory"></label>
+                    </div>
+                    <div class="yellow">
+                        <input type="checkbox" value="yellow" name="yellow" id="yellow" class="available_colors">
+                        <label for="yellow"></label>
+                    </div>
+                    <div class="orange">
+                        <input type="checkbox" value="orange" name="orange" id="orange" class="available_colors">
+                        <label for="orange"></label>
+                    </div>
+                    <div class="pink">
+                        <input type="checkbox" value="pink" name="pink" id="pink" class="available_colors">
+                        <label for="pink"></label>
+
+                    </div>
+                    <div class="red">
+                        <input type="checkbox" value="red" name="red" id="red" class="available_colors">
+                        <label for="red"></label>
+                    </div>
+
+                    <div class="darkred">
+                        <input type="checkbox" value="darkred" name="darkred" id="darkred" class="available_colors">
+                        <label for="darkred"></label>
+                    </div>
+                    <div class="green">
+                        <input type="checkbox" value="green" name="green" id="green" class="available_colors">
+                        <label for="green"></label>
+                    </div>
+                    <div class="lightblue">
+                        <input type="checkbox" value="lightblue" name="lightblue" id="lightblue" class="available_colors">
+                        <label for="lightblue"></label>
+                    </div>
+                    <div class="blue">
+                        <input type="checkbox" value="blue" name="blue" id="blue" class="available_colors">
+                        <label for="blue"></label>
+                    </div>
+
+                    <div class="gray">
+                        <input type="checkbox" value="gray" name="gray" id="gray" class="available_colors">
+                        <label for="gray"></label>
+                    </div>
+                    <div class="black">
+                        <input type="checkbox" value="black" name="black" id="black" class="available_colors">
+                        <label for="black"></label>
+
+                    </div>
+
+                </div>
+
+
+            </fieldset>
+            <fieldset>
+                <legend>Выбор изображения:</legend>
+                <input type="file" id="image" accept="image/*"><br>
+                <div class="progressBar">0%</div>
+
+                <button type="button" onclick="upload()" class="btn">ЗАГРУЗИТЬ ФОТО</button>
+
+            </fieldset>
+
+
+            <button id="addBtn" class="btn">СОХРАНИТЬ</button>
+
+            <!-- <button id="updBtn">Update</button>
+
+            <button id="delBtn">Delete</button> -->
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB0A0aatRuT9-SQEJxPi9YzOm-9RN5BG8c",
+            authDomain: "noziram-shop.firebaseapp.com",
+            databaseURL: "https://noziram-shop.firebaseio.com",
+            projectId: "noziram-shop",
+            storageBucket: "noziram-shop.appspot.com",
+            messagingSenderId: "165866790390",
+            appId: "1:165866790390:web:401f111765275ef1fabbd7",
+            measurementId: "G-3CMDYFRTKP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="connect.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+</body>
+
+</html>

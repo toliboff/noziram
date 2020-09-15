@@ -1,0 +1,341 @@
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Comfortaa', cursive;
+}
+
+.container {
+    width: 100vw;
+    /* max-width: 360px; */
+    /* border: 1px solid red; */
+}
+
+
+/* ----------------  LOGIN FORM -------------- */
+
+.login-container {
+    position: fixed;
+    z-index: 1;
+    background: rgb(250, 201, 239);
+    height: 100%;
+    width: 100vw;
+    background: url("img/pinkbg2.gif");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-elements {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+    width: 90%;
+}
+
+.close {
+    color: rgb(250, 101, 238);
+    align-self: flex-end;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.form-elements input {
+    color: #7a787a;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.form-elements input:focus {
+    box-shadow: 0 0 3px 1px rgb(236, 93, 193);
+    outline: none;
+}
+
+.pink-btn {
+    width: 100%;
+    margin: 5px auto;
+    border: none;
+    color: white;
+    /* height: 30px; */
+    font-size: 1.2em;
+    padding: 10px;
+    background: linear-gradient(95deg, #b60498, #f30a50);
+    border-radius: 5px;
+}
+
+
+/* -------------------------------------------- */
+
+header {
+    width: 100%;
+    position: relative;
+}
+
+header img {
+    width: 100%;
+}
+
+.hidden-logo {
+    position: sticky;
+    top: 0;
+    -webkit-position: sticky;
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border: 1px solid #ccc;
+    margin: 0;
+    background: #fff;
+    transition-delay: 0.5s;
+}
+
+.shopname {
+    align-self: center;
+    margin: auto;
+    color: #b60498;
+}
+
+.hidden-logo img {
+    width: 50px;
+}
+
+.hidden-logo a {
+    font-weight: 700;
+    color: rgb(153, 153, 153);
+}
+
+.fa-mobile-alt,
+.fa-bars,
+.fa-search {
+    font-size: 1.5em;
+    color: rgb(153, 153, 153);
+}
+
+.user-account {
+    color: rgb(153, 153, 153);
+}
+
+
+/*  ------------- PRODUCT CARD ------------ */
+
+.product-card {
+    align-items: center;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    box-shadow: 0px 5px 7px 1px #ccc;
+}
+
+.image-container img {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.like-comments {
+    display: flex;
+    padding: 3px 5px;
+    color: rgb(121, 118, 118);
+}
+
+.svg-inline--fa {
+    margin-left: 10px;
+}
+
+.price {
+    margin-left: auto;
+    margin-right: 5px;
+    font-weight: 900;
+}
+
+.info {
+    padding: 10px;
+}
+
+.info h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.info p {
+    margin: 5px 0;
+    font-size: 0.8em;
+    text-align: justify;
+    /* display: none; */
+}
+
+.colors {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: flex-end; */
+}
+
+.colors .color {
+    margin-right: auto;
+    font-size: 0.9em;
+}
+
+.colors div {
+    margin-right: 5px;
+    border: 1px solid #ccc;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+
+/* ------------------- ADMIN PANEL ------------------- */
+
+.container {
+    width: 100%;
+}
+
+.admin-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.admin-logo img {
+    width: 50px;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 5px;
+}
+
+select,
+input,
+textarea,
+fieldset {
+    margin-top: 10px;
+    border: 1px solid rgb(252, 187, 241);
+    padding: 5px;
+    font-family: inherit;
+    background: #fff;
+}
+
+input[type=file] {
+    border: none;
+}
+
+.colors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.colors-container div {
+    border: 1px solid #ccc;
+    height: 75px;
+    width: 75px;
+    display: flex;
+    position: relative;
+}
+
+.colors-container div input[type=checkbox] {
+    position: absolute;
+}
+
+.colors-container div label {
+    flex-grow: 1;
+}
+
+.white {
+    background: #fff;
+}
+
+.black {
+    background: #000;
+}
+
+.red {
+    background: #f00;
+}
+
+.darkred {
+    background: rgb(105, 5, 5);
+}
+
+.green {
+    background: rgb(32, 155, 32);
+}
+
+.blue {
+    background: #00f;
+}
+
+.lightblue {
+    background: #63deee;
+}
+
+.yellow {
+    background: #f7e707;
+}
+
+.pink {
+    background: rgb(236, 8, 187);
+}
+
+.orange {
+    background: #ff6600;
+}
+
+.blue {
+    background: #00f;
+}
+
+.gray {
+    background: rgb(175, 175, 175);
+}
+
+.ivory {
+    background: ivory;
+}
+
+.colors-fieldset div {
+    /* border: 1px solid red; */
+}
+
+.progressBar {
+    border: 1px solid silver;
+    border-radius: 5px;
+    height: 11px;
+    margin: 5px 0;
+    width: 5.3%;
+    padding: 1px;
+    background: #0f0;
+    font-size: 8px;
+    text-align: right;
+    padding-right: 5px;
+    /* color: #fff; */
+}
+
+.btn {
+    width: 100%;
+    margin: 5px auto;
+    border: none;
+    background: rgb(24, 185, 105);
+    color: white;
+    /* height: 30px; */
+    font-size: 1.2em;
+    padding: 10px;
+}

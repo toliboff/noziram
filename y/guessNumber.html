@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessNumber</title>
+</head>
+
+<body>
+    <h1>Угадай число от 1 до 100</h1>
+    <input type="number" id="hiddenNum">
+    <br><br><br>
+    <input type="number" id="userNum" min=1 max=100>
+    <button type="button" onClick="checkNumber()">Проверь</button>
+    <label for="" id="guessedNumbers"></label>
+
+
+    <script>
+        let hiddenNum = document.querySelector("#hiddenNum");
+        let guessedNumbers = document.querySelector("#guessedNumbers");
+
+        hiddenNum.value = Math.round(Math.random() * 100)
+        let turn = 1;
+        let chance = 6;
+
+        function checkNumber() {
+
+            if (chance == 0) alert("Вы проиграли!")
+            let userNum = document.querySelector("#userNum");
+            guessedNumbers.innerHTML += userNum.value + " ";
+            console.log("Hidden: " + hiddenNum.value + ". User: " + userNum)
+            if (userNum.value == hiddenNum.value) {
+                console.log(`Поздравляем! Вы угадали номер с ${turn}-го раза`)
+            }
+            if (userNum.value < hiddenNum.value) console.log(`Ваш номер меньше искомого номера. У Вас осталось ${chance} попыток.`);
+            if (userNum.value > hiddenNum.value) console.log(`Ваш номер больше искомого номера. У Вас осталось ${chance} попыток.`)
+            userNum.value = "";
+            turn++;
+            chance--;
+        }
+    </script>
+</body>
+
+</html>

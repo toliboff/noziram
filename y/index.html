@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noziram - магазин женского нижнего белья</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="all.css">
+
+    <script src="all.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="login-container">
+
+        <div class="form-elements">
+            <div class="close"><i class="far fa-times-circle"></i></div>
+            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button id="btnLogin" class="pink-btn">Войти</button>
+            <button id="btnSignUp" class="pink-btn">Регистрация</button>
+            <button class="btn" id="btnSignOut">Выйти</button>
+        </div>
+
+
+    </div>
+    <!-- <i class="fas fa-heart"></i>
+    <i class="far fa-heart"></i>
+    <i class="far fa-comment"></i>
+    <i class="fas fa-comment"></i>
+    <i class="far fa-comments"></i>
+    <i class="fas fa-comments"></i>
+    <i class="fas fa-plus"></i> -->
+    <div class="container">
+
+
+        <header>
+            <img src="img/logo2.jpg" alt="" class="logo">
+            <div class="contacts">
+                <!-- <a href="tel:992929296077">  92-929-60-77</a> -->
+            </div>
+
+        </header>
+        <div class="hidden-logo" id="hidden-logo">
+            <!-- <i class="fas fa-bars"></i> -->
+
+            <!-- <img src="img/logo3.jpg" alt="NoziRam"> -->
+            <a href="tel:+992929296077"> <i class="fas fa-mobile-alt"></i></a>
+            <i class="fas fa-search "></i>
+            <span class="shopname">NOZIRAM</span>
+            <!-- <div class="user-account"> -->
+            <span><i class="fas fa-envelope"></i></span>
+
+            <span id="user"><i class="fas fa-user" ></i></span>
+            <!-- </div> -->
+
+        </div>
+        <section id="section">
+            <!-- /////////////////////////////////////////////////////////////////// -->
+            <article class="product-card">
+
+                <!-- <div class="image-container">
+                    <img src="img/products/image (1).jpg" alt="" class="product-image">
+                </div>
+                <div class="like-comments">
+
+                    <i class="far fa-heart"></i>
+
+                    <i class="far fa-comments"></i>
+                    <span class="price">77 с.</span>
+                </div>
+                <div class="info">
+                    <h3>Футболка</h3>
+                    <p>Предмет одежды с короткими рукавами, закрывающий верхнюю часть туловища. Встречаются также варианты без рукавов.</p>
+                    <div class="colors">
+                        <span class="color">Доступные цвета:</span>
+                        <div class="red"></div>
+                        <div class="blue"></div>
+                        <div class="white"></div>
+                    </div>
+                </div>
+            </article> -->
+
+
+        </section>
+    </div>
+
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-messaging.js"></script>
+    <!-- <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" /> -->
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyB0A0aatRuT9-SQEJxPi9YzOm-9RN5BG8c",
+            authDomain: "noziram-shop.firebaseapp.com",
+            databaseURL: "https://noziram-shop.firebaseio.com",
+            projectId: "noziram-shop",
+            storageBucket: "noziram-shop.appspot.com",
+            messagingSenderId: "165866790390",
+            appId: "1:165866790390:web:401f111765275ef1fabbd7",
+            measurementId: "G-3CMDYFRTKP"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+    <script src="script.js"></script>
+    <script src="getData.js"></script>
+</body>
+
+</html>

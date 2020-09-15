@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web notifications</title>
+</head>
+
+<body>
+    <input type="button" onclick="notifSet()" name="" id="" value="Notification">
+    <script>
+        function notifyMe() {
+            var notification = new Notification("Все еше работаешь", {
+                tag: "ache-mail",
+                body: "Пора сделать паузу и отдохнуть",
+                icon: "img/mini-logo.jpg"
+
+            });
+
+        }
+
+        function notifSet() {
+            if ((Notification in window)) {
+                alert("Ваш браузер не поддерживает уведомление.")
+            } else if (Notification.permission === "granted") {
+                setTimeout(notifyMe, 2000);
+            } else if (Notification.permission !== "denied") {
+                Notification.requestPermission(function(permission) {
+                    if (!('permission' in Notification)) {
+                        Notification.permission = permission;
+
+                    }
+                    if (permission === "granted") {
+                        setTimeout(notifyMe, 2000)
+                    }
+                })
+            }
+        }
+    </script>
+</body>
+
+</html>
